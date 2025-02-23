@@ -8,7 +8,7 @@ A fun way to increase your productivity with a cute desktop companion that react
 
 ### 1. Clone the Repository
 ```
-git clone https://github.com/yourusername/productivity-pet.git
+git clone https://github.com/kavya835/Productivity-Pet.git
 cd productivity-pet
 ```
 ### 2. Install Dependencies
