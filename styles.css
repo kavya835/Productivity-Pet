@@ -71,7 +71,7 @@ button:hover {
   font-size: 50px;
 }
 
-.timer {
+#timer {
   color: #f58076;
   font-family: "Jersey 10";
   font-size: 100px;
