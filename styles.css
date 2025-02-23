@@ -93,4 +93,31 @@ button:hover {
 
 /* --- TIMER START --- */
 
+.happy-sequence {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
+.happy-sequence img {
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    animation: imageCycle 4s infinite steps(1);
+}
+
+/* Assign animation delay for each image */
+.happy-sequence img:nth-child(1) { animation-delay: 0s; }
+.happy-sequence img:nth-child(2) { animation-delay: 1s; }
+.happy-sequence img:nth-child(3) { animation-delay: 2s; }
+.happy-sequence img:nth-child(4) { animation-delay: 3s; }
+
+@keyframes imageCycle {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
