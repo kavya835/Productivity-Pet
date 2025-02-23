@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Jersey 10';
+    src: url('./assets/fonts/Jersey10-Regular.ttf') format('truetype');
+}
 
 * {
     margin: 0;
@@ -14,7 +18,7 @@ body {
 
 /* --- HOME --- */
 
-.main {
+.main, .start-timer, .break-timer, .end-timer {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -26,7 +30,7 @@ body {
     padding: 10px;
 }
 
-.intro-cat {
+.intro-cat, .sleepy-cat, .sad-cat {
     max-width: 50%;
     height: auto;
     margin: 0 auto;
@@ -34,7 +38,7 @@ body {
     margin-bottom: 20px;
 }
 
-#start-btn{
+#start-btn, #resume-btn, #restart-btn {
     color: white;
     font-family: 'Jersey 10';
     font-size: 30px;
@@ -46,8 +50,47 @@ body {
     border-radius: 15px;
 }
 
-#start-btn:hover {
+button:hover {
     transform: scale(1.1) perspective(1px);
     transition: 0.3 ease;
     cursor: pointer;
 }
+
+
+.start-text, .break-text, .end-text {
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.timer {
+    color: #F58076;
+    font-family: 'Jersey 10';
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.timer-btns {
+    color: white;
+    font-family: 'Jersey 10';
+    font-size: 30px;
+    background: #F58076;
+    padding: 20px;
+    width: 180px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 15px;
+}
+
+
+
+/* --- TIMER START --- */
+
+
