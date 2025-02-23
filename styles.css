@@ -1,123 +1,226 @@
 @font-face {
-    font-family: 'Jersey 10';
-    src: url('./assets/fonts/Jersey10-Regular.ttf') format('truetype');
+  font-family: "Jersey 10";
+  src: url("./assets/fonts/Jersey10-Regular.ttf") format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #FFE5E5;
-    color: black;
-    font-family: 'Jersey 10';
-    font-size: 50px;
+  background-color: #ffe5e5;
+  color: black;
+  font-family: "Jersey 10";
+  font-size: 50px;
 }
 
 /* --- HOME --- */
 
-.main, .start-timer, .break-timer, .end-timer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+.main,
+.start-timer,
+.break-timer,
+.end-timer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .title {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
-.intro-cat, .sleepy-cat, .sad-cat {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 20px;
+.intro-cat,
+.sleepy-cat,
+.sad-cat {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-#start-btn, #resume-btn, #restart-btn {
-    color: white;
-    font-family: 'Jersey 10';
-    font-size: 30px;
-    background: #F58076;
-    padding: 20px;
-    width: 180px;
-    margin: 0 auto;
-    border: none;
-    border-radius: 15px;
+#start-btn,
+#resume-btn,
+#restart-btn {
+  color: white;
+  font-family: "Jersey 10";
+  font-size: 30px;
+  background: #f58076;
+  padding: 20px;
+  width: 180px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 15px;
 }
 
 button:hover {
-    transform: scale(1.1) perspective(1px);
-    transition: 0.3 ease;
-    cursor: pointer;
+  transform: scale(1.1) perspective(1px);
+  transition: 0.3 ease;
+  cursor: pointer;
 }
 
-
-.start-text, .break-text, .end-text {
-    text-align: center;
-    padding: 10px;
-    font-size: 50px;
+.start-text,
+.break-text,
+.end-text {
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
 }
 
 .timer {
-    color: #F58076;
-    font-family: 'Jersey 10';
-    font-size: 100px;
-    text-align: center;
-    padding: 10px;
+  color: #f58076;
+  font-family: "Jersey 10";
+  font-size: 100px;
+  text-align: center;
+  padding: 10px;
 }
 
 .button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .timer-btns {
-    color: white;
-    font-family: 'Jersey 10';
-    font-size: 30px;
-    background: #F58076;
-    padding: 20px;
-    width: 180px;
-    margin: 0 auto;
-    border: none;
-    border-radius: 15px;
+  color: white;
+  font-family: "Jersey 10";
+  font-size: 30px;
+  background: #f58076;
+  padding: 20px;
+  width: 180px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 15px;
 }
-
-
 
 /* --- TIMER START --- */
 
-.happy-sequence {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 20px;
+.happy-sequence,
+.sleepy-sequence,
+.sad-sequence {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .happy-sequence img {
-    position: absolute;
-    object-fit: cover;
-    opacity: 0;
-    animation: imageCycle 4s infinite steps(1);
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  animation: happyAnimation 4s infinite steps(1);
 }
 
-/* Assign animation delay for each image */
-.happy-sequence img:nth-child(1) { animation-delay: 0s; }
-.happy-sequence img:nth-child(2) { animation-delay: 1s; }
-.happy-sequence img:nth-child(3) { animation-delay: 2s; }
-.happy-sequence img:nth-child(4) { animation-delay: 3s; }
+.happy-sequence img:nth-child(1) {
+  animation-delay: 0s;
+}
+.happy-sequence img:nth-child(2) {
+  animation-delay: 1s;
+}
+.happy-sequence img:nth-child(3) {
+  animation-delay: 2s;
+}
+.happy-sequence img:nth-child(4) {
+  animation-delay: 3s;
+}
 
-@keyframes imageCycle {
-    0% { opacity: 1; }
-    25% { opacity: 0; }
-    50% { opacity: 0; }
-    100% { opacity: 0; }
+@keyframes happyAnimation {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* --- BREAK --- */
+
+.sleepy-sequence {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.sleepy-sequence img {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  animation: sleepyAnimation 2s infinite steps(1);
+}
+
+.sleepy-sequence img:nth-child(1) {
+  animation-delay: 0s;
+}
+.sleepy-sequence img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes sleepyAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* --- END --- */
+
+.sad-sequence {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.sad-sequence img {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  animation: sadAnimation 3s infinite steps(1);
+}
+
+.sad-sequence img:nth-child(1) {
+  animation-delay: 0s;
+}
+.sad-sequence img:nth-child(2) {
+  animation-delay: 1s;
+}
+.sad-sequence img:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes sadAnimation {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
